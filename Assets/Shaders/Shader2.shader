@@ -1,10 +1,11 @@
-﻿Shader "Custom/Shader2" {
-    Properties {
+﻿Shader "Custom/Shader2" 
+{
+    Properties 
+    {
         _MainTex ("Texture", 2D) = "white" {}
         _Scale ("Scale", float) = 1
         _Speed ("Speed", float) = 1
         _Frequency ("Frequency", float) = 1
-        _Color ("Color", Color) = (1,1,1,1)
     }
     SubShader
     {
@@ -18,7 +19,6 @@
 
             sampler2D _MainTex;
             float _Scale, _Speed, _Frequency;
-            half4 _Color;
 
             struct appdata
             {
@@ -48,7 +48,6 @@
                 half4 c = tex2D(_MainTex, i.uv);
                 return c;
             }
-
             ENDCG
         }
     }
